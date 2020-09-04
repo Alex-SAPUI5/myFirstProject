@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/UIComponent","sap/ui/model/json/JSONModel"],function(e,t){"use strict";return e.extend("sap.ui.demo.walkthrough.Component",{metadata:{manifest:"json"},init:function(){e.prototype.init.apply(this,arguments);var n={recipient:{name:"World"}};var i=new t(n);this.setModel(i)}})});
