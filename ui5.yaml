@@ -5,3 +5,18 @@ type: application
 framework:
   name: SAPUI5
   version: "1.81.1"
+server:
+  customMiddleware:
+    # proxy for ui5 resources 
+    - name: ui5-middleware-http-proxy
+      mountPath: /resources
+      beforeMiddleware: compression
+      configuration:
+        baseUrl: https://sapui5.hana.ondemand.com/
+        path: /resources
+    - name: ui5-middleware-http-proxy
+      mountPath: /service
+      beforeMiddleware: compression
+      configuration:
+        baseUrl: https://services.odata.org
+        path: /V2/Northwind/Northwind.svc/

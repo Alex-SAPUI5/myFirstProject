@@ -10,11 +10,17 @@
     "stop": "pkill --signal SIGINT myApp"
   },
   "devDependencies": {
-    "cors-anywhere": "^0.4.1"
+    "cors-anywhere": "^0.4.1",
+    "ui5-middleware-http-proxy": "^1.0.1"
   },
   "dependencies": {
     "@openui5/sap.m": "^1",
     "@openui5/sap.ui.core": "^1",
     "@openui5/themelib_sap_fiori_3": "^1"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-middleware-http-proxy"
+    ]
   }
 }
